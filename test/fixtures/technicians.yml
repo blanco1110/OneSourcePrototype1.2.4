@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tech_name: MyString
+  technician_status: one
+  tech_expertise_notes: MyString
+
+two:
+  tech_name: MyString
+  technician_status: two
+  tech_expertise_notes: MyString

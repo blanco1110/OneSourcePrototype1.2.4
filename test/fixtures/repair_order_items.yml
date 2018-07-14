@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  repair_order: one
+  device_component: one
+  technician: one
+  warranty_expire_date: 2018-07-07
+  warranty_coverage_notes: MyString
+  repaired_as_warranty: 
+  warranty_repair_date: 2018-07-07
+
+two:
+  repair_order: two
+  device_component: two
+  technician: two
+  warranty_expire_date: 2018-07-07
+  warranty_coverage_notes: MyString
+  repaired_as_warranty: 
+  warranty_repair_date: 2018-07-07

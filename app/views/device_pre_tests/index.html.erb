@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Device Pre Tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device pre test date</th>
+      <th>Repair order</th>
+      <th>Test</th>
+      <th>Pre test condition</th>
+      <th>Pre test notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @device_pre_tests.each do |device_pre_test| %>
+      <tr>
+        <td><%= device_pre_test.device_pre_test_date %></td>
+        <td><%= device_pre_test.repair_order %></td>
+        <td><%= device_pre_test.test %></td>
+        <td><%= device_pre_test.pre_test_condition %></td>
+        <td><%= device_pre_test.pre_test_notes %></td>
+        <td><%= link_to 'Show', device_pre_test %></td>
+        <td><%= link_to 'Edit', edit_device_pre_test_path(device_pre_test) %></td>
+        <td><%= link_to 'Destroy', device_pre_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device Pre Test', new_device_pre_test_path %>

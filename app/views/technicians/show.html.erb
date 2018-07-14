@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tech name:</strong>
+  <%= @technician.tech_name %>
+</p>
+
+<p>
+  <strong>Technician status:</strong>
+  <%= @technician.technician_status %>
+</p>
+
+<p>
+  <strong>Tech expertise notes:</strong>
+  <%= @technician.tech_expertise_notes %>
+</p>
+
+<%= link_to 'Edit', edit_technician_path(@technician) %> |
+<%= link_to 'Back', technicians_path %>

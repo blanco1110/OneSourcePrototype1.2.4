@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Device Components</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device version</th>
+      <th>Device comp name</th>
+      <th>Device comp color</th>
+      <th>Device comp description</th>
+      <th>Device component status</th>
+      <th>Device comp cost</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @device_components.each do |device_component| %>
+      <tr>
+        <td><%= device_component.device_version %></td>
+        <td><%= device_component.device_comp_name %></td>
+        <td><%= device_component.device_comp_color %></td>
+        <td><%= device_component.device_comp_description %></td>
+        <td><%= device_component.device_component_status %></td>
+        <td><%= device_component.device_comp_cost %></td>
+        <td><%= link_to 'Show', device_component %></td>
+        <td><%= link_to 'Edit', edit_device_component_path(device_component) %></td>
+        <td><%= link_to 'Destroy', device_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device Component', new_device_component_path %>

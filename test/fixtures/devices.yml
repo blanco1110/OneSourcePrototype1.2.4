@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imei_number: 1
+  device_type: MyString
+  device_color: MyString
+  device_notes: MyString
+  customer: one
+  device_version: one
+
+two:
+  imei_number: 1
+  device_type: MyString
+  device_color: MyString
+  device_notes: MyString
+  customer: two
+  device_version: two

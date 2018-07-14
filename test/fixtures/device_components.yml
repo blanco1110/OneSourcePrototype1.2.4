@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_version: one
+  device_comp_name: MyString
+  device_comp_color: MyString
+  device_comp_description: MyString
+  device_component_status: one
+  device_comp_cost: 9.99
+
+two:
+  device_version: two
+  device_comp_name: MyString
+  device_comp_color: MyString
+  device_comp_description: MyString
+  device_component_status: two
+  device_comp_cost: 9.99

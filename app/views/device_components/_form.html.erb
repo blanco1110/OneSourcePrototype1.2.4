@@ -1,0 +1,47 @@
+<%= form_with(model: device_component, local: true) do |form| %>
+  <% if device_component.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(device_component.errors.count, "error") %> prohibited this device_component from being saved:</h2>
+
+      <ul>
+      <% device_component.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :device_version_id %>
+    <%= form.text_field :device_version_id, id: :device_component_device_version_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_comp_name %>
+    <%= form.text_field :device_comp_name, id: :device_component_device_comp_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_comp_color %>
+    <%= form.text_field :device_comp_color, id: :device_component_device_comp_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_comp_description %>
+    <%= form.text_field :device_comp_description, id: :device_component_device_comp_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_component_status_id %>
+    <%= form.text_field :device_component_status_id, id: :device_component_device_component_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_comp_cost %>
+    <%= form.text_field :device_comp_cost, id: :device_component_device_comp_cost %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

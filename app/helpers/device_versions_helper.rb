@@ -1,0 +1,2 @@
+module DeviceVersionsHelper
+end

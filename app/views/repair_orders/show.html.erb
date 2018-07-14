@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Repair order date:</strong>
+  <%= @repair_order.repair_order_date %>
+</p>
+
+<p>
+  <strong>Repair order subtotal:</strong>
+  <%= @repair_order.repair_order_subtotal %>
+</p>
+
+<p>
+  <strong>Repair order tax:</strong>
+  <%= @repair_order.repair_order_tax %>
+</p>
+
+<p>
+  <strong>Repair order total:</strong>
+  <%= @repair_order.repair_order_total %>
+</p>
+
+<p>
+  <strong>Repair order accessories:</strong>
+  <%= @repair_order.repair_order_accessories %>
+</p>
+
+<p>
+  <strong>Repair order notes:</strong>
+  <%= @repair_order.repair_order_notes %>
+</p>
+
+<p>
+  <strong>Repair order status:</strong>
+  <%= @repair_order.repair_order_status %>
+</p>
+
+<p>
+  <strong>Repair order status date:</strong>
+  <%= @repair_order.repair_order_status_date %>
+</p>
+
+<%= link_to 'Edit', edit_repair_order_path(@repair_order) %> |
+<%= link_to 'Back', repair_orders_path %>

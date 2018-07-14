@@ -1,0 +1,32 @@
+<%= form_with(model: technician, local: true) do |form| %>
+  <% if technician.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(technician.errors.count, "error") %> prohibited this technician from being saved:</h2>
+
+      <ul>
+      <% technician.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tech_name %>
+    <%= form.text_field :tech_name, id: :technician_tech_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :technician_status_id %>
+    <%= form.text_field :technician_status_id, id: :technician_technician_status_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tech_expertise_notes %>
+    <%= form.text_field :tech_expertise_notes, id: :technician_tech_expertise_notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

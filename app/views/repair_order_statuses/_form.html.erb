@@ -1,0 +1,22 @@
+<%= form_with(model: repair_order_status, local: true) do |form| %>
+  <% if repair_order_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repair_order_status.errors.count, "error") %> prohibited this repair_order_status from being saved:</h2>
+
+      <ul>
+      <% repair_order_status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :repair_order_status %>
+    <%= form.text_field :repair_order_status, id: :repair_order_status_repair_order_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

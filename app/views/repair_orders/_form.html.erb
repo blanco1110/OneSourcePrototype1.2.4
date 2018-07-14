@@ -1,0 +1,57 @@
+<%= form_with(model: repair_order, local: true) do |form| %>
+  <% if repair_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repair_order.errors.count, "error") %> prohibited this repair_order from being saved:</h2>
+
+      <ul>
+      <% repair_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :repair_order_date %>
+    <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_subtotal %>
+    <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_tax %>
+    <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_total %>
+    <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_accessories %>
+    <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_notes %>
+    <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_status_id %>
+    <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_status_date %>
+    <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

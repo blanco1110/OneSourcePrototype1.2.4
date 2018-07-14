@@ -1,0 +1,42 @@
+<%= form_with(model: device_post_test, local: true) do |form| %>
+  <% if device_post_test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(device_post_test.errors.count, "error") %> prohibited this device_post_test from being saved:</h2>
+
+      <ul>
+      <% device_post_test.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :device_post_test_date %>
+    <%= form.date_select :device_post_test_date, id: :device_post_test_device_post_test_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_id %>
+    <%= form.text_field :repair_order_id, id: :device_post_test_repair_order_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :test_id %>
+    <%= form.text_field :test_id, id: :device_post_test_test_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :post_test_condition %>
+    <%= form.text_field :post_test_condition, id: :device_post_test_post_test_condition %>
+  </div>
+
+  <div class="field">
+    <%= form.label :post_test_notes %>
+    <%= form.text_field :post_test_notes, id: :device_post_test_post_test_notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Repair Order Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Repair order</th>
+      <th>Device component</th>
+      <th>Technician</th>
+      <th>Warranty expire date</th>
+      <th>Warranty coverage notes</th>
+      <th>Repaired as warranty</th>
+      <th>Warranty repair date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repair_order_items.each do |repair_order_item| %>
+      <tr>
+        <td><%= repair_order_item.repair_order %></td>
+        <td><%= repair_order_item.device_component %></td>
+        <td><%= repair_order_item.technician %></td>
+        <td><%= repair_order_item.warranty_expire_date %></td>
+        <td><%= repair_order_item.warranty_coverage_notes %></td>
+        <td><%= repair_order_item.repaired_as_warranty %></td>
+        <td><%= repair_order_item.warranty_repair_date %></td>
+        <td><%= link_to 'Show', repair_order_item %></td>
+        <td><%= link_to 'Edit', edit_repair_order_item_path(repair_order_item) %></td>
+        <td><%= link_to 'Destroy', repair_order_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Repair Order Item', new_repair_order_item_path %>

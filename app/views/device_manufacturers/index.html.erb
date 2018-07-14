@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Device Manufacturers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device manu name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @device_manufacturers.each do |device_manufacturer| %>
+      <tr>
+        <td><%= device_manufacturer.device_manu_name %></td>
+        <td><%= link_to 'Show', device_manufacturer %></td>
+        <td><%= link_to 'Edit', edit_device_manufacturer_path(device_manufacturer) %></td>
+        <td><%= link_to 'Destroy', device_manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device Manufacturer', new_device_manufacturer_path %>

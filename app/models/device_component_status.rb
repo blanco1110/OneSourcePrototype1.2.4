@@ -1,0 +1,2 @@
+class DeviceComponentStatus < ApplicationRecord
+end

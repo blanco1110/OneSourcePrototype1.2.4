@@ -1,0 +1,27 @@
+<%= form_with(model: device_repair_order, local: true) do |form| %>
+  <% if device_repair_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(device_repair_order.errors.count, "error") %> prohibited this device_repair_order from being saved:</h2>
+
+      <ul>
+      <% device_repair_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :device_id %>
+    <%= form.text_field :device_id, id: :device_repair_order_device_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repair_order_id %>
+    <%= form.text_field :repair_order_id, id: :device_repair_order_repair_order_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

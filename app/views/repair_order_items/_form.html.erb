@@ -1,0 +1,52 @@
+<%= form_with(model: repair_order_item, local: true) do |form| %>
+  <% if repair_order_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(repair_order_item.errors.count, "error") %> prohibited this repair_order_item from being saved:</h2>
+
+      <ul>
+      <% repair_order_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :repair_order_id %>
+    <%= form.text_field :repair_order_id, id: :repair_order_item_repair_order_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_component_id %>
+    <%= form.text_field :device_component_id, id: :repair_order_item_device_component_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :technician_id %>
+    <%= form.text_field :technician_id, id: :repair_order_item_technician_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :warranty_expire_date %>
+    <%= form.date_select :warranty_expire_date, id: :repair_order_item_warranty_expire_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :warranty_coverage_notes %>
+    <%= form.text_field :warranty_coverage_notes, id: :repair_order_item_warranty_coverage_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repaired_as_warranty %>
+    <%= form.text_field :repaired_as_warranty, id: :repair_order_item_repaired_as_warranty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :warranty_repair_date %>
+    <%= form.date_select :warranty_repair_date, id: :repair_order_item_warranty_repair_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

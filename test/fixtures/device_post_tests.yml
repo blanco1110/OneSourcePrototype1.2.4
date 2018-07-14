@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device_post_test_date: 2018-07-07
+  repair_order: one
+  test: one
+  post_test_condition: MyString
+  post_test_notes: MyString
+
+two:
+  device_post_test_date: 2018-07-07
+  repair_order: two
+  test: two
+  post_test_condition: MyString
+  post_test_notes: MyString

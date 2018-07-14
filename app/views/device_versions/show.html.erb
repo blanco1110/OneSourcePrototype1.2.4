@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device version name:</strong>
+  <%= @device_version.device_version_name %>
+</p>
+
+<p>
+  <strong>Device manufacturer:</strong>
+  <%= @device_version.device_manufacturer %>
+</p>
+
+<%= link_to 'Edit', edit_device_version_path(@device_version) %> |
+<%= link_to 'Back', device_versions_path %>

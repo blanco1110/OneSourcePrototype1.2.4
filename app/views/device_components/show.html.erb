@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device version:</strong>
+  <%= @device_component.device_version %>
+</p>
+
+<p>
+  <strong>Device comp name:</strong>
+  <%= @device_component.device_comp_name %>
+</p>
+
+<p>
+  <strong>Device comp color:</strong>
+  <%= @device_component.device_comp_color %>
+</p>
+
+<p>
+  <strong>Device comp description:</strong>
+  <%= @device_component.device_comp_description %>
+</p>
+
+<p>
+  <strong>Device component status:</strong>
+  <%= @device_component.device_component_status %>
+</p>
+
+<p>
+  <strong>Device comp cost:</strong>
+  <%= @device_component.device_comp_cost %>
+</p>
+
+<%= link_to 'Edit', edit_device_component_path(@device_component) %> |
+<%= link_to 'Back', device_components_path %>

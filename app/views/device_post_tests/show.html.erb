@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device post test date:</strong>
+  <%= @device_post_test.device_post_test_date %>
+</p>
+
+<p>
+  <strong>Repair order:</strong>
+  <%= @device_post_test.repair_order %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @device_post_test.test %>
+</p>
+
+<p>
+  <strong>Post test condition:</strong>
+  <%= @device_post_test.post_test_condition %>
+</p>
+
+<p>
+  <strong>Post test notes:</strong>
+  <%= @device_post_test.post_test_notes %>
+</p>
+
+<%= link_to 'Edit', edit_device_post_test_path(@device_post_test) %> |
+<%= link_to 'Back', device_post_tests_path %>

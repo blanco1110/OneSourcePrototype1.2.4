@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imei number:</strong>
+  <%= @device.imei_number %>
+</p>
+
+<p>
+  <strong>Device type:</strong>
+  <%= @device.device_type %>
+</p>
+
+<p>
+  <strong>Device color:</strong>
+  <%= @device.device_color %>
+</p>
+
+<p>
+  <strong>Device notes:</strong>
+  <%= @device.device_notes %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @device.customer %>
+</p>
+
+<p>
+  <strong>Device version:</strong>
+  <%= @device.device_version %>
+</p>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

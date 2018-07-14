@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Repair order:</strong>
+  <%= @repair_order_item.repair_order %>
+</p>
+
+<p>
+  <strong>Device component:</strong>
+  <%= @repair_order_item.device_component %>
+</p>
+
+<p>
+  <strong>Technician:</strong>
+  <%= @repair_order_item.technician %>
+</p>
+
+<p>
+  <strong>Warranty expire date:</strong>
+  <%= @repair_order_item.warranty_expire_date %>
+</p>
+
+<p>
+  <strong>Warranty coverage notes:</strong>
+  <%= @repair_order_item.warranty_coverage_notes %>
+</p>
+
+<p>
+  <strong>Repaired as warranty:</strong>
+  <%= @repair_order_item.repaired_as_warranty %>
+</p>
+
+<p>
+  <strong>Warranty repair date:</strong>
+  <%= @repair_order_item.warranty_repair_date %>
+</p>
+
+<%= link_to 'Edit', edit_repair_order_item_path(@repair_order_item) %> |
+<%= link_to 'Back', repair_order_items_path %>

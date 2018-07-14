@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Device Versions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device version name</th>
+      <th>Device manufacturer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @device_versions.each do |device_version| %>
+      <tr>
+        <td><%= device_version.device_version_name %></td>
+        <td><%= device_version.device_manufacturer %></td>
+        <td><%= link_to 'Show', device_version %></td>
+        <td><%= link_to 'Edit', edit_device_version_path(device_version) %></td>
+        <td><%= link_to 'Destroy', device_version, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device Version', new_device_version_path %>
