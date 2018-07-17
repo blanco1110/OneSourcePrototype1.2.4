@@ -1,0 +1,37 @@
+<tr>
+  <td>
+    <%= form.hidden_field :_destroy, as: :hidden %>
+    <%= link_to 'Delete', '#', class: 'remove_record' %>
+  </td>
+  <td>
+    <div class="field">
+      <%= form.label :Device_Version_id %>
+      <%=  form.collection_select :device_version_id, DeviceVersion.order(:device_version_name), :id, :device_version_name, :include_blank => true %>
+    </div>
+  </td>
+  <td>
+    <div class="field">
+      <%= form.label :imei_number %>
+      <%= form.number_field :imei_number, id: :device_imei_number %>
+    </div>
+
+    <div class="field">
+      <%= form.label :device_type %>
+      <%= form.text_field :device_type, id: :device_device_type %>
+    </div>
+
+    <div class="field">
+      <%= form.label :device_color %>
+      <%= form.text_field :device_color, id: :device_device_color %>
+    </div>
+
+    <div class="field">
+      <%= form.label :device_notes %>
+      <%= form.text_field :device_notes, id: :device_device_notes %>
+    </div>
+    <%= form.build_nested_records(:device_repair_orders, minimum: 1, buffer: 0) %>
+    <%= form.fields_for :device_repair_orders do |builder| %>
+        <%= render 'device_repair_order', form: builder %>
+    <% end %>
+  </td>
+</tr>
