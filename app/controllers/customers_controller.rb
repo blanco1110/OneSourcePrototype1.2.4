@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  before_action :set_customer, only: %i[show edit update destroy]
 
   # GET /customers
   # GET /customers.json
@@ -9,17 +9,17 @@ class CustomersController < ApplicationController
 
   # GET /customers/1
   # GET /customers/1.json
-  def show
-  end
+  def show; end
 
   # GET /customers/new
   def new
     @customer = Customer.new
+    @customer.devices.build.device_repair_orders.build
+
   end
 
   # GET /customers/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /customers
   # POST /customers.json
@@ -62,13 +62,16 @@ class CustomersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_customer
-      @customer = Customer.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def customer_params
-      params.require(:customer).permit(:customer_fname, :customer_lname, :customer_email, :customer_phone, :customer_call, :customer_text, :customer_zip)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_customer
+    @customer = Customer.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def customer_params
+    params.require(:customer).permit(:customer_fname, :customer_lname, :customer_email, :customer_phone, :customer_call, :customer_text, :customer_zip,
+                                     :devices_attributes => [:imei_number, :device_type, :device_color, :device_notes, :customer_id, :device_version_id,
+                                                             :device_repair_orders_attributes => [:device_id, :repair_order_id]])
+  end
 end

@@ -22,8 +22,9 @@
         <td><%= device.device_type %></td>
         <td><%= device.device_color %></td>
         <td><%= device.device_notes %></td>
-        <td><%= device.customer %></td>
-        <td><%= device.device_version %></td>
+        <td><%= device.customer.customer_fname %></td>
+        <td><%= device.device_version.device_version_name %></td>
+        <td><%= device.customer.customer_fname %></td>
         <td><%= link_to 'Show', device %></td>
         <td><%= link_to 'Edit', edit_device_path(device) %></td>
         <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>

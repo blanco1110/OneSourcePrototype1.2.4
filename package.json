@@ -1,5 +1,7 @@
 {
   "name": "OneSourcePrototype1_2_4",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }

@@ -22,12 +22,12 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @device.customer %>
+  <%= @device.customer.customer_fname%>
 </p>
 
 <p>
   <strong>Device version:</strong>
-  <%= @device.device_version %>
+  <%= @device.device_version.device_version_name %>
 </p>
 
 <%= link_to 'Edit', edit_device_path(@device) %> |

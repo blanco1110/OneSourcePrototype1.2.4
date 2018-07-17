@@ -46,7 +46,24 @@
     <%= form.text_field :customer_zip, id: :customer_customer_zip %>
   </div>
 
+  <table class='table'>
+    <thead>
+    <tr>
+      <th></th>
+      <th>Devices</th>
+
+    </tr>
+    </thead>
+    <tbody class="fields" >
+    <%= form.fields_for :devices do |builder| %>
+        <%= render 'device', form: builder %>
+
+    <% end %>
+    </tbody>
+  </table>
+
   <div class="actions">
     <%= form.submit %>
+    <%= link_to_add_row('Add Device', form, :devices, class: 'btn btn-primary') %>
   </div>
 <% end %>

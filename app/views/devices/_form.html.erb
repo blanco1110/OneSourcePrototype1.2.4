@@ -37,18 +37,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :device_manufacturer_id %>
-    <%= form.collection_select :device_manufacturer_id, DeviceManufacturer.all, :id, :device_manu_name %>
-  </div>
-
-  <div class="field">
     <%= form.label :device_version_id %>
     <%= form.collection_select :device_version_id, DeviceVersion.all, :id, :device_version_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :device_version_id %>
-    <%= form.text_field :device_version_id, id: :device_device_version_id %>
   </div>
 
   <div class="actions">

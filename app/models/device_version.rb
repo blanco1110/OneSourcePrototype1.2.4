@@ -1,5 +1,5 @@
 class DeviceVersion < ApplicationRecord
-  belongs_to :device_manufacturer
+
+  has_many :customers, through: :devices
   has_many :devices
-  has_many :device_components
 end
